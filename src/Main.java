@@ -12,7 +12,7 @@ public class Main {
 
         // Prompt the user to enter community cards
         promptKnownCards();
-        // Print the size and contents of knownCards and deck (for screencast)
+        /*// Print the size and contents of knownCards and deck (for screencast)
         System.out.println("\nSize of knownCards: " + knownCards.size() + "\n Contents of knownCards: ");
         for (Card card : knownCards) {
             System.out.print(card.toString() + ", ");
@@ -20,38 +20,38 @@ public class Main {
         System.out.println("\nSize of deck: " + deck.size() + "\n Contents of deck: ");
         for (Card card : deck) {
             System.out.println(card.toString() + " ");
-        }
+        }*/
 
         // Prompt the user to enter the number of times they would like to run the simulation
         simulationCount = 0;
         promptSimulationCount();
-        // Print the contents of simulationCount (for screencast)
+        /*// Print the contents of simulationCount (for screencast)
         System.out.println("\nsimulationCount: " + simulationCount);
-
+*/
         // Store simulationCount in another int variable, used for calculating the probability (CHANGE - added step)
         total = simulationCount;
 
         // Run the simulation!
         while (simulationCount > 0) {
-            // Print out the contents of knownCards and simulationCount (for screencast)
+            /*// Print out the contents of knownCards and simulationCount (for screencast)
             System.out.println("\nknownCards: ");
             for (Card card : knownCards) {
                 System.out.println(card + " ");
             }
-            System.out.println("simulationCount: " + simulationCount);
+            System.out.println("simulationCount: " + simulationCount);*/
 
             // Draw two random Card objects from deck and add it to knownCards
             Collections.shuffle(deck);
             knownCards.add(deck.get(0));
             knownCards.add(deck.get(1));
 
-            // Print out the content of knownCards before checking for the probabilities (for screencast)
+            /*// Print out the content of knownCards before checking for the probabilities (for screencast)
             System.out.println("\nknownCards: ");
             for (Card card : knownCards) {
                 System.out.println(card + " ");
             }
             // Print out the length of handCount (for screencast)
-            System.out.println("length of handCount: " + handCount.length);
+            System.out.println("length of handCount: " + handCount.length);*/
 
             // Call the checker method for each hand type.
             if (hasRF()) {
@@ -95,12 +95,12 @@ public class Main {
         // Call printProbabilities method
         printProbabilities();
 
-        // Print sum of handsCount array (for screencast)
+        /*// Print sum of handsCount array (for screencast)
         int sum = 0;
         for (int i : handCount) {
             sum += i;
         }
-        System.out.println("Sum of handsCount array: " + sum + "\nsimulationCount: " + total);
+        System.out.println("Sum of handsCount array: " + sum + "\nsimulationCount: " + total);*/
 
     }
 
@@ -474,7 +474,7 @@ public class Main {
         System.out.println("High Card: " + probabilities[9]);
 
 
-        // Print out the sum of probabilities (for screencast)
-        System.out.println("\nThe probabilities add up to: " + probSum);
+        /*// Print out the sum of probabilities (for screencast)
+        System.out.println("\nThe probabilities add up to: " + probSum);*/
     }
 }
